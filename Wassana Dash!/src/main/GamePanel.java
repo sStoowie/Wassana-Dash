@@ -47,7 +47,7 @@ public class GamePanel extends JPanel implements Runnable{
     
     
     //Object
-    public SuperObject obj[] = new SuperObject[10];
+    public SuperObject obj[] = new SuperObject[20];
     
     //customer
     public Entity cust[] = new Entity[10];
@@ -129,20 +129,32 @@ public class GamePanel extends JPanel implements Runnable{
          //draw tile before player (tile will be behind player)
         tileM.draw(g2);
         
-        //draw obj
-        for(int i = 0; i < obj.length; i++){
-            if(obj[i] != null){
-                obj[i].draw(g2, this);
-            }
-        }
         //draw customer
         for(int i = 0; i < cust.length; i++){
             if(cust[i] != null){
                 cust[i].draw(g2, this);
             }
         }
+        
+        //draw obj
+        for(int i = 0; i < obj.length; i++){
+            if(obj[i] != null && (i != 13 || i != 11 || i != 12 || i != 14)){
+                obj[i].draw(g2, this);
+            }
+        }
+        
+        
         //draw player
         player.draw(g2);
+        
+        //draw obj (toptable)
+        for(int i = 0; i < obj.length; i++){
+            if(obj[i] != null && (i == 13 || i == 11 || i == 12 || i == 14)){
+                obj[i].draw(g2, this);
+            }
+        }
+        
+        
         //dispose graphic context and release sys rerource that it using
         g2.dispose();
     }
@@ -151,11 +163,8 @@ public class GamePanel extends JPanel implements Runnable{
         sound.play();
         sound.loop();
     }
+    
     public void stopMusic(){
         sound.stop();
-    }
-    public void playSFX(int i){
-        sound.setFile(i);
-        sound.play();
     }
 }

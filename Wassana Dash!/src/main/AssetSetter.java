@@ -5,6 +5,8 @@ import entity.Customer;
 import object.OBJ_Key;
 import object.Table;
 import object.Shop;
+import object.TablewithDish;
+import object.topTablewithDish;
 // set pos for object
 public class AssetSetter {
     GamePanel gp;
@@ -23,35 +25,57 @@ public class AssetSetter {
         gp.obj[0].x = 7 * gp.tileSize + 23;
         gp.obj[0].y = 0;
         
+        
+        
         //table A
-       gp.obj[1] = new Table();
-       gp.obj[1].x = 5 * gp.tileSize + 13;
+        gp.obj[1] = new Table();
+        gp.obj[1].x = 5 * gp.tileSize + 13;
         gp.obj[1].y = 3 * gp.tileSize + 14;
         
+//        gp.obj[11] = new topTablewithDish();
+//        gp.obj[11].x = 5 * gp.tileSize + 13;
+//        gp.obj[11].y = 3 * gp.tileSize + 14;
+        
+
         //table B
         gp.obj[2] = new Table();
         gp.obj[2].x = 11 * gp.tileSize - 14;
         gp.obj[2].y = 3 * gp.tileSize + 14;
         
+//        gp.obj[12] = new topTablewithDish();
+//        gp.obj[12].x = 11 * gp.tileSize - 14;
+//        gp.obj[12].y = 3 * gp.tileSize + 14;
+        
         //tabel C
         gp.obj[3] = new Table();
         gp.obj[3].x = 5 * gp.tileSize + 13;
         gp.obj[3].y = 7 * gp.tileSize + 7;
+//        
+//        gp.obj[13] = new topTablewithDish();
+//        gp.obj[13].x = 5 * gp.tileSize + 13;
+//        gp.obj[13].y = 7 * gp.tileSize + 7;
         
         //tabel D
         gp.obj[4] = new Table();
         gp.obj[4].x = 11 * gp.tileSize - 14;
         gp.obj[4].y = 7 * gp.tileSize + 7;
         
+//        gp.obj[14] = new topTablewithDish();
+//        gp.obj[14].x = 11 * gp.tileSize - 14;
+//        gp.obj[14].y = 7 * gp.tileSize + 7;
+        
         //noodles
         gp.obj[5] = new OBJ_Key();
         gp.obj[5].x = 8 * gp.tileSize;
         gp.obj[5].y = 7 * gp.tileSize;
+       
     }
+    
     
     public void setCustomer(){
         gp.cust[0] = new Customer(gp);
         gp.cust[0].x = gp.tileSize * 21;
         gp.cust[0].y = gp.tileSize * 21;
     }
+
 }

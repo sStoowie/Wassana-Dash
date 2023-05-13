@@ -12,7 +12,7 @@ public class Entity {
     public int speed;
     
     //image
-    public BufferedImage up1, up2, down1, down2, left1, left2, right1, right2, stand1, stand2;
+    public BufferedImage up1, up2, down1, down2, left1, left2, right1, right2, stand1, stand2, hasdish;
     public String direction;
     
     //make animation : change pic
