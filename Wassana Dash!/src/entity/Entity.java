@@ -12,7 +12,8 @@ public class Entity {
     public int speed;
     
     //image
-    public BufferedImage up1, up2, down1, down2, left1, left2, right1, right2, stand1, stand2, hasdish;
+    public BufferedImage up1, up2, down1, down2, left1, left2, right1, right2, stand1, stand2;
+    public BufferedImage updish1, updish2, downdish1, downdish2, leftdish1, leftdish2, rightdish1, rightdish2;
     public String direction;
     
     //make animation : change pic

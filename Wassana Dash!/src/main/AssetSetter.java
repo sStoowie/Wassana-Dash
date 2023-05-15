@@ -64,11 +64,11 @@ public class AssetSetter {
 //        gp.obj[14].x = 11 * gp.tileSize - 14;
 //        gp.obj[14].y = 7 * gp.tileSize + 7;
         
-        //noodles
-        gp.obj[5] = new OBJ_Key();
-        gp.obj[5].x = 8 * gp.tileSize;
-        gp.obj[5].y = 7 * gp.tileSize;
-       
+//        //noodles
+//        gp.obj[5] = new OBJ_Key();
+//        gp.obj[5].x = 8 * gp.tileSize;
+//        gp.obj[5].y = 7 * gp.tileSize;
+//       
     }
     
     

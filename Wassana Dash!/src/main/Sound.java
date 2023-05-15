@@ -9,6 +9,7 @@ public class Sound {
     Clip clip;
     File sound[] = new File[30];
     
+    
     public Sound(){
         sound[0] = new File("res/sound/bg.wav");
     }

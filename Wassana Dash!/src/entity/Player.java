@@ -13,6 +13,9 @@ import main.AssetSetter;
 import main.GamePanel;
 import main.KeyHandler;
 import main.AssetSetter;
+import main.Sleep;
+import object.Shop;
+import object.ShopnoNoodle;
 import object.TablewithDish;
 import object.topTablewithDish;
 
@@ -30,6 +33,7 @@ public class Player extends Entity{
         super(gp);
         this.gp = gp;
         this.keyH = keyH;
+        
         
         //solid (x, y, width, height)
         solidArea = new Rectangle();
@@ -64,7 +68,16 @@ public class Player extends Entity{
             left2 = ImageIO.read(new File("res/player/boy_left_2.png"));
             right1 = ImageIO.read(new File("res/player/boy_right_1.png"));
             right2 = ImageIO.read(new File("res/player/boy_right_2.png"));
-            hasdish = ImageIO.read(new File("res/player/kuy.png"));
+            updish1 = ImageIO.read(new File("res/player/updish1.png"));
+            updish2 = ImageIO.read(new File("res/player/updish2.png"));
+            downdish1 = ImageIO.read(new File("res/player/downdish1.png"));
+            downdish2 = ImageIO.read(new File("res/player/downdish2.png"));
+            leftdish1 = ImageIO.read(new File("res/player/leftdish1.png"));
+            leftdish2 = ImageIO.read(new File("res/player/leftdish2.png"));
+            rightdish1 = ImageIO.read(new File("res/player/rightdish1.png"));
+            rightdish2 = ImageIO.read(new File("res/player/rightdish2.png"));
+            
+                    
         }catch(IOException e){
             e.printStackTrace();
         }
@@ -128,16 +141,24 @@ public class Player extends Entity{
     }
     
     public void pickUpObject(int i) {
+        
+   
 
         if(keyH.pickUpPressed == true){
-            if(i == 5){
+            if(i == 0){
                 String objectName = gp.obj[i].name; 
+                
                 switch(objectName){
-                    case("Key"):
+                    case("Shop"):
+                      
+                        gp.obj[19] = new ShopnoNoodle();
+                        gp.obj[19].x = 7 * gp.tileSize + 23;
+                        gp.obj[19].y = 0;
+
                         hasKey+=3;
                         gp.obj[i] = null;
                         System.out.println("key : "+ hasKey);
-                        gp.obj[i] = null;
+                        
                         
                 }       
             }
@@ -183,7 +204,7 @@ public class Player extends Entity{
                             gp.obj[2] = null;
                             hasKey-- ;
                             System.out.println("key : "+ hasKey);
-                                             
+                           
                         }
                 } 
             }  
@@ -276,34 +297,34 @@ public class Player extends Entity{
             switch(direction){
                 case "up":
                     if(spriteNum == 1){
-                        image = hasdish;
+                        image = updish1;
                     }
                     if(spriteNum == 2){
-                        image = hasdish;
+                        image = updish2;
                     }
                     break;
                 case "down":
                     if(spriteNum == 1){
-                        image = hasdish;
+                        image = downdish1;
                     }
                     if(spriteNum == 2){
-                        image = hasdish;
+                        image = downdish2;
                     }
                     break;
                 case "left":
                     if(spriteNum == 1){
-                        image = hasdish;
+                        image = leftdish1;
                     }
                     if(spriteNum == 2){
-                        image = hasdish;
+                        image = leftdish2;
                     }
                     break;
                 case "right":
                     if(spriteNum == 1){
-                        image = hasdish;
+                        image = rightdish1;
                     }
                     if(spriteNum == 2){
-                        image = hasdish;
+                        image = rightdish2;
                     }
                     break;
             }

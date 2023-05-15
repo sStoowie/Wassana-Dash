@@ -20,7 +20,7 @@ public class Shop extends SuperObject{
         
         
         try{
-            image = ImageIO.read(new File("res/objects/shop.png"));
+            image = ImageIO.read(new File("res/objects/shopwnoodle.png"));
         }catch(IOException e){
             e.printStackTrace();
         }
