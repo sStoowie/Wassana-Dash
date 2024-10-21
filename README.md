@@ -1,2 +1,2 @@
 # Wassana-Dash
-for OOP PROJECT
+FOR FUN
